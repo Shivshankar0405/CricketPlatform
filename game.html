@@ -1,0 +1,38 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batting Challenge - Cricketers Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏏 Batting Challenge</h1>
+        <div class="game-stats">
+            <span id="current-score">Score: 0</span>
+            <span id="balls-remaining">Balls: 10</span>
+            <span id="game-coins">Coins: 100</span>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <canvas id="cricket-canvas" width="800" height="400"></canvas>
+        <div class="game-controls">
+            <button id="swing-button" onclick="swingBat()">SWING BAT!</button>
+            <button onclick="exitGame()">Exit Game</button>
+        </div>
+        
+        <div class="powerups">
+            <h3>Powerups</h3>
+            <div class="powerup-card" onclick="usePowerup('helicopter-shot')">
+                🚁 Helicopter Shot (50 coins)
+            </div>
+        </div>
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- leaderboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards - Cricketers Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏆 Leaderboards</h1>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#profile">Profile</a>
+            <button onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <div class="leaderboard-container">
+        <div class="leaderboard-filter">
+            <select id="game-type" onchange="updateLeaderboard()">
+                <option value="batting">Batting Challenge</option>
+                <option value="bowling">Bowling Master</option>
+                <option value="tournament">Weekly Tournament</option>
+            </select>
+        </div>
+
+        <div class="leaderboard-list" id="leaderboard-entries">
+            <!-- Leaderboard entries will be injected here -->
+            <div class="leaderboard-entry">
+                <span class="rank">1.</span>
+                <span class="username">CricketKing123</span>
+                <span class="score">2450 points</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+</html>

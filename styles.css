@@ -1,0 +1,343 @@
+/* styles.css */
+:root {
+  --primary-color: #2B8C44; /* Cricket green */
+  --secondary-color: #FFD700; /* Gold for coins */
+  --accent-color: #E31837; /* Red for accents */
+  --background-color: #0F1A20;
+  --text-color: #FFFFFF;
+  --card-bg: #1A2A33;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Auth Pages */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+}
+
+#auth-switch {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#auth-switch button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: #2C3E50;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#auth-switch button.active {
+  background: var(--primary-color);
+}
+
+.auth-form {
+  display: none;
+}
+
+.auth-form.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #30475E;
+  border-radius: 5px;
+  background: #30475E;
+  color: var(--text-color);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1E6B32;
+  transform: translateY(-2px);
+}
+
+/* Dashboard */
+header {
+  background: var(--card-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.game-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.daily-bonus {
+  background: linear-gradient(135deg, var(--primary-color), #1E6B32);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tournament-banner {
+  background: var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Game Page */
+.game-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+#cricket-canvas {
+  background: #15202B;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.game-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 5px;
+}
+
+.powerups {
+  margin-top: 2rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.powerup-card {
+  background: #2C3E50;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.powerup-card:hover {
+  background: var(--primary-color);
+}
+
+/* Profile Page */
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.user-stats {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #30475E;
+}
+
+.referral-section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.achievements {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.achievement {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: #2C3E50;
+  border-radius: 5px;
+}
+
+.achievement.locked {
+  opacity: 0.5;
+}
+
+/* Leaderboard */
+.leaderboard-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.leaderboard-list {
+  margin-top: 1.5rem;
+}
+
+.leaderboard-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: var(--card-bg);
+  border-radius: 5px;
+}
+
+.leaderboard-filter select {
+  background: #30475E;
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* Admin Panel */
+.admin-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.admin-section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.game-meta {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.user-search {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Utilities */
+#auth-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.error {
+  background: #E31837;
+  color: white;
+}
+
+.success {
+  background: #2B8C44;
+  color: white;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-container {
+    padding: 0.5rem;
+  }
+}

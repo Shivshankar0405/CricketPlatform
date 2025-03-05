@@ -1,0 +1,43 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cricketers Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>🔒 Admin Panel</h1>
+        
+        <div class="admin-section">
+            <h2>Upload New Game</h2>
+            <input type="file" id="game-file">
+            <div class="game-meta">
+                <input type="text" id="game-name" placeholder="Game Name">
+                <input type="number" id="game-cost" placeholder="Coin Cost">
+            </div>
+            <button onclick="uploadGame()">Deploy Game</button>
+        </div>
+
+        <div class="admin-section">
+            <h2>Manage Users</h2>
+            <div class="user-search">
+                <input type="text" id="search-user" placeholder="Search by email">
+                <button onclick="searchUser()">Search</button>
+            </div>
+            <div id="user-results"></div>
+        </div>
+
+        <div class="admin-section">
+            <h2>Tournament Controls</h2>
+            <button onclick="startTournament()">Start New Tournament</button>
+            <button onclick="endTournament()">End Current Tournament</button>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
